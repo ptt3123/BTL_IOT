@@ -1,0 +1,123 @@
+.cardbox {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cardbox .card {
+  position: relative;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cardbox .card .name {
+  color: var(--white);
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.cardbox .card .value {
+  position: relative;
+  font-weight: 500;
+  font-size: 2.5em;
+}
+
+.cardbox .card .icon {
+  font-size: 3.5em;
+  color: var(--white);
+}
+
+.history {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.history .recent,
+.history .hardware {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.history .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.history .header h2 {
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.history .btn {
+  position: relative;
+  padding: 5px 10px;
+  background: var(--blue);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 6px;
+}
+
+.history .hardware {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  gap: 30px;
+}
+
+.history .hardware .list {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.history .hardware .list .ware {
+  position: relative;
+  background-color: var(--white);
+  padding: 20px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+}
+
+.history .hardware .list .ware .cont {
+  display: grid;
+  width: 120px;
+  text-align: center;
+}
+
+.history .hardware .list .ware .name {
+  color: var(--black2);
+  font-size: 1.1em;
+  margin-top: 5px;
+}
+
+.history .hardware .list .ware .hicon {
+  font-size: 3.5em;
+}

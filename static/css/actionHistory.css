@@ -1,0 +1,108 @@
+.actionHistory {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.actionHistory .query {
+  position: relative;
+  display: grid;
+  min-height: 500px;
+  background: var(--white);
+  padding: 20px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+}
+
+.actionHistory .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.actionHistory .header h2 {
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.actionHistory .btn {
+  position: relative;
+  padding: 5px 10px;
+  background: var(--blue);
+  text-decoration: none;
+  color: var(--white);
+  border-radius: 6px;
+  border: none;
+}
+
+.actionHistory table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.actionHistory table th td {
+  font-weight: 600;
+}
+
+.actionHistory table tr {
+  color: var(--black1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.actionHistory table tr:last-child {
+  border-bottom: none;
+}
+
+.actionHistory table tbody tr:hover {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.actionHistory .center {
+  text-align: center;
+}
+
+.actionHistory .center::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.actionHistory .pagination {
+  display: inline-block;
+}
+
+.actionHistory .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+}
+
+.actionHistory .pagination a.value {
+  pointer-events: none;
+}
+
+.actionHistory .pagination a.active {
+  background-color: var(--blue);
+  color: white;
+  border: 1px solid var(--blue);
+}
+
+.actionHistory .pagination a.active:hover {
+  background: var(--white);
+  color: var(--blue);
+}
+
+.query .header form {
+  display: flex;
+}

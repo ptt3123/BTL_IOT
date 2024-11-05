@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+    <link rel="stylesheet" type='text/css' href="static/css/actionHistory.css">
+    <div class="actionHistory">
+        <div class="query">
+
+            <div class="header">
+                <h2>Action History</h2>
+                <form id="searchForm" class="form-inline">
+                    <input id="txt" name="txt" class="form-control mr-sm-2" type="search" placeholder="Search...">
+                    <input name="pagesize" class="form-control mr-sm-2" type="number" value="20" min="1" max="30" style="width:50px;">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <td>Id</td>
+                        <td>HW</td>
+                        <td>Action</td>
+                        <td>Time</td>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+            <div class="center">
+                <div class="pagination">
+                    <a href="#" id="prevPage" class="disabled">«</a>
+                    <a href="javascript:void(0);" id="currentPage">1</a>
+                    <a href="javascript:void(0);">/</a>
+                    <a href="javascript:void(0);" id="totalPages">0</a>
+                    <a href="#" id="nextPage">»</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="static/js/actionHistory.js"></script>
+{% endblock content %}

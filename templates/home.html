@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <link rel="stylesheet" type='text/css' href="static/css/home.css">
+
+    <div class="cardbox">
+                
+        <div class="card temperature">
+            <div>
+                <div class="name">Temperature</div>
+                <div class="value">24&degC</div>
+            </div>
+            <div class="icon">
+                <i class="bi bi-thermometer"></i>
+            </div>
+        </div>
+        <div class="card humidity">
+            <div>
+                <div class="name">Humidity</div>
+                <div class="value">40%</div>
+            </div>
+            <div class="icon">
+                <i class="bi bi-moisture"></i>
+            </div>
+        </div>
+        <div class="card light">
+            <div>
+                <div class="name">Light</div>
+                <div class="value">1231 Lux</div>
+            </div>
+            <div class="icon">
+                <i class="bi bi-brightness-high"></i>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="history">
+        <div class="recent">
+            <div class="header">
+                <h2>Recent History</h2>
+                <a href="core/database" class="btn">View All</a>
+            </div>
+            <div class="chart">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+        <div class="hardware">
+            <div class="header">
+                <h2>Hardware</h2>
+            </div>
+            <div class="list">
+                <div class="ware">
+                    <div class="cont">
+                        <div class="name">Fan</div>
+                        <a href="javascript:void(0);" class="btn" onclick="sendMessage('fan')">ON/OFF</a>
+                    </div>
+                    <div class="hicon">
+                        <i class="bi bi-fan"></i>
+                    </div>
+                </div>
+                <div class="ware">
+                    <div class="cont">
+                        <div class="name">Light</div>
+                        <a href="javascript:void(0);" class="btn" onclick="sendMessage('led')">ON/OFF</a>
+                    </div>
+                    <div class="hicon">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                </div>
+                <div class="ware">
+                    <div class="cont">
+                        <div class="name">Conditioner</div>
+                        <a href="javascript:void(0);" class="btn" onclick="sendMessage('con')">ON/OFF</a>
+                    </div>
+                    <div class="hicon">
+                        <i class="bi bi-fan"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/home.js"></script>
+{% endblock %}
+
