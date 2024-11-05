@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>IoT Project</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" type='text/css' href="static/css/layout.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
+    <body>
+
+        <!-- navigation -->
+        <div class="container">
+
+            <div class="navigation">
+
+                <ul>
+                    <li>
+                        <a href="">
+                            <span class="icon"><i class="bi bi-filetype-py"></i></span>
+                            <span class="title">IoTProject</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/home">
+                            <span class="icon"><i class="bi bi-house"></i></span>
+                            <span class="title">Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/database">
+                            <span class="icon"><i class="bi bi-database"></i></span>
+                            <span class="title">Database</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/actionHistory">
+                            <span class="icon"><i class="bi bi-clock-history"></i></span>
+                            <span class="title">Action History</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/portfolio">
+                            <span class="icon"><i class="bi bi-person"></i></span>
+                            <span class="title">Portfolio</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- main -->
+        <div class="main">
+
+            <div class="topbar">
+
+                <div class="toggle">
+                    <i class="bi bi-list"></i>
+                </div>
+                <div class="user">
+                    <img src="static/image/user.jpg" alt="">
+                </div>
+
+            </div>
+
+            <!-- content -->
+            {% block content %}{% endblock content %}
+           
+        </div>
+        <script src="static/js/layout.js"></script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+.portfolio{
+    position: relative;
+    height: 700px;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+.portfolio .port{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+}
+
+.portfolio .port .cont{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
