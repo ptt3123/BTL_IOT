@@ -32,7 +32,9 @@
         async function fetchData() {
             txt = document.getElementById("txt").value;
             pageSize = document.querySelector('input[name="pagesize"]').value;
-            const response = await fetch(`/api/database?txt=${txt}&pagesize=${pageSize}&page=${currentPage}`);
+            const sortOrder = document.getElementById('sortOrder').value;
+            const sortItem = document.getElementById('sortItem').value;
+            const response = await fetch(`/api/database?txt=${txt}&pagesize=${pageSize}&page=${currentPage}&item=${sortItem}&order=${sortOrder}`);
             const result = await response.json();
 
             totalItems = result.total;

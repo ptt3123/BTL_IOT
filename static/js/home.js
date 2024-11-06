@@ -93,6 +93,15 @@ socket.onmessage = function (event) {
     let tem = data.tem;
     let hum = data.hum;
     let lig = data.lig;
+
+    // Thay đổi nội dung trong div có class "light"
+    document.querySelector('.card.temperature .value').innerText = tem + ' dC';
+
+    // Thay đổi nội dung trong div có class "fan"
+    document.querySelector('.card.humidity .value').innerText = hum + ' %';
+
+    // Thay đổi nội dung trong div có class "temperature"
+    document.querySelector('.card.light .value').innerText = lig + ' Lux';
   
     // Cập nhậ giá trị
     xValues.push(tim);

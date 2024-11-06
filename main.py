@@ -28,7 +28,7 @@ def on_message(mqttclient, userdata, msg):
         global cnt
         cnt += 1
         if cnt == 5:
-            create_data(data)
+            # create_data(data)
             cnt = 0
 
         data.update({"tim": datetime.now().strftime("%H:%M:%S")})
@@ -45,7 +45,7 @@ def on_message(mqttclient, userdata, msg):
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
-client.connect('192.168.194.19', 1883)
+client.connect('172.20.10.4', 1883)
 client.loop_start()
 
 
@@ -103,10 +103,11 @@ async def database_get(request: Request):
 
 @app.get("/api/database")
 async def get_data(txt: str = Query(default=""),
+                   item: str = Query(default=""), order = Query(default=""),
                    pagesize: int = Query(default=20), page: int = Query(default=1)):
 
     txt = txt.replace("T", " ")
-    lst, total_items = read_data(txt, pagesize, page)
+    lst, total_items = read_data(txt, pagesize, page, item, order)
     return {"data": lst, "total": total_items}
 
 
@@ -120,7 +121,7 @@ async def action_history_get(request: Request):
 
 
 @app.get("/api/actionHistory")
-async def get_data(txt: str = Query(default=""),
+async def get_actionHistory(txt: str = Query(default=""),
                    pagesize: int = Query(default=20), page: int = Query(default=1)):
 
     txt = txt.replace("T", " ")

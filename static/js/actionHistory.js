@@ -32,7 +32,8 @@
         async function fetchData() {
             txt = document.getElementById("txt").value;
             pageSize = document.querySelector('input[name="pagesize"]').value;
-            const response = await fetch(`/api/actionHistory?txt=${txt}&pagesize=${pageSize}&page=${currentPage}`);
+            const sortOrder = document.getElementById('sortOrder').value;
+            const response = await fetch(`/api/actionHistory?txt=${txt}&pagesize=${pageSize}&page=${currentPage}&order=${sortOrder}`);
             const result = await response.json();
 
             totalItems = result.total;
