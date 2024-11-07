@@ -11,14 +11,14 @@
                     <input id="txt" name="txt" class="form-control mr-sm-2" type="search" placeholder="Search...">
                     <input name="pagesize" class="form-control mr-sm-2" type="number" value="20" min="1" max="30" style="width:50px;">
                     <select id="sortItem" name="sortItem" class="form-control mr-sm-2">
-                        <option value="id">Id</option>
+                        <option value="tim">Time</option>
                         <option value="tem">Nhiệt độ</option>
                         <option value="hum">Độ ẩm</option>
                         <option value="lig">Ánh sáng</option>
                     </select>
                     <select id="sortOrder" name="sortOrder" class="form-control mr-sm-2">
-                        <option value="asc">Sort Ascending</option>
                         <option value="desc">Sort Descending</option>
+                        <option value="asc">Sort Ascending</option>
                     </select>
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
@@ -28,9 +28,10 @@
                 <thead>
                     <tr>
                         <td style="width: 10%;">Id</td>
-                        <td style="width: 20%;">Temperature</td>
-                        <td style="width: 20%;">Humidity</td>
-                        <td style="width: 20%;">Light</td>
+                        <td style="width: 15%;">Temperature</td>
+                        <td style="width: 15%;">Humidity</td>
+                        <td style="width: 15%;">Light</td>
+                        <td style="width: 15%;">Wind Speed</td>
                         <td style="width: 30%;">Time</td>
                     </tr>
                 </thead>

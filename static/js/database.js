@@ -54,18 +54,21 @@
                 const cellTem = document.createElement("td");
                 const cellHum = document.createElement("td");
                 const cellLig = document.createElement("td");
+                const cellWS = document.createElement("td");
                 const cellTim = document.createElement("td");
 
                 cellId.textContent = item.id;
                 cellTem.textContent = item.tem;
                 cellHum.textContent = item.hum;
                 cellLig.textContent = item.lig;
+                cellWS.textContent = item.ws;
                 cellTim.textContent = item.tim;
 
                 row.appendChild(cellId);
                 row.appendChild(cellTem);
                 row.appendChild(cellHum);
                 row.appendChild(cellLig);
+                row.appendChild(cellWS);
                 row.appendChild(cellTim);
 
                 tableBody.appendChild(row);

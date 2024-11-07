@@ -1,0 +1,49 @@
+/* Tạo background xanh dương cho container và thêm viền */
+.b5container {
+    display: flex;                      /* Thiết lập Flexbox cho container */
+    justify-content: space-between;      /* Đảm bảo các phần tử có không gian giữa chúng */
+    align-items: center;                /* Căn giữa các phần tử theo chiều dọc */
+    width: 100%;                         /* Đảm bảo container có chiều rộng đầy đủ */
+    background-color: #3498db;           /* Màu nền xanh dương cho container */
+    padding: 20px;                       /* Thêm khoảng cách xung quanh container */
+    border-radius: 10px;                 /* Bo góc cho container */
+    border: 3px solid #2980b9;           /* Thêm viền xanh đậm cho container */
+    box-sizing: border-box;              /* Đảm bảo padding không ảnh hưởng đến kích thước tổng thể */
+}
+
+/* Cải thiện phần tử .box và .chart */
+.box, .chart {
+    padding: 10px;                       /* Khoảng cách bên trong mỗi box */
+    text-align: center;                  /* Căn giữa nội dung của mỗi box */
+    box-sizing: border-box;              /* Đảm bảo padding không ảnh hưởng đến kích thước tổng thể */
+    margin: 0 10px;                      /* Thêm khoảng cách giữa các phần tử */
+    border-radius: 10px;                 /* Bo góc cho các ô con */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tạo bóng mờ cho các ô con */
+    border: 2px solid #2980b9;           /* Thêm viền xanh đậm cho các ô con */
+}
+
+/* Màu nền cho các ô con */
+.value-box, .icon-box {
+    background-color: white;             /* Màu nền trắng cho các ô */
+    flex: 1;                             /* Các ô con chiếm 1 phần không gian */
+    border-radius: 10px;                 /* Bo góc cho các ô con */
+    border: 2px solid #2980b9;           /* Thêm viền xanh đậm cho các ô con */
+}
+
+/* Tạo background cho biểu đồ */
+.chart {
+    background-color: #e9e9e9;           /* Màu nền nhẹ cho biểu đồ */
+    flex: 2;                             /* Biểu đồ chiếm 2 phần không gian */
+    border-radius: 10px;                 /* Bo góc cho biểu đồ */
+    border: 2px solid #2980b9;           /* Thêm viền xanh đậm cho biểu đồ */
+}
+
+/* Màu nền cho biểu tượng cảnh báo */
+.warning-icon {
+    width: 40px;                         /* Kích thước của biểu tượng cảnh báo */
+    height: 40px;                        /* Kích thước của biểu tượng cảnh báo */
+    background-color: red;               /* Màu nền của cảnh báo */
+    border-radius: 50%;                  /* Làm cho icon có hình tròn */
+    margin: 0 auto;                      /* Căn giữa biểu tượng */
+    border: 2px solid #2980b9;           /* Thêm viền cho icon cảnh báo */
+}

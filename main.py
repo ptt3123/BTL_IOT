@@ -28,7 +28,7 @@ def on_message(mqttclient, userdata, msg):
         global cnt
         cnt += 1
         if cnt == 5:
-            # create_data(data)
+            create_data(data)
             cnt = 0
 
         data.update({"tim": datetime.now().strftime("%H:%M:%S")})
@@ -66,6 +66,11 @@ loop = asyncio.get_event_loop()
 @app.get("/home", response_class=HTMLResponse)
 async def home_get(request: Request):
     return templates.TemplateResponse("home.html", {"request": request})
+
+
+@app.get("/bai5", response_class=HTMLResponse)
+async def home_get(request: Request):
+    return templates.TemplateResponse("bai5.html", {"request": request})
 
 
 @app.websocket("/ws")
@@ -121,11 +126,12 @@ async def action_history_get(request: Request):
 
 
 @app.get("/api/actionHistory")
-async def get_actionHistory(txt: str = Query(default=""),
+async def get_action_history(txt: str = Query(default=""),
+                    item: str = Query(default=""), order = Query(default=""),
                    pagesize: int = Query(default=20), page: int = Query(default=1)):
 
     txt = txt.replace("T", " ")
-    lst, total_items = read_action(txt, pagesize, page)
+    lst, total_items = read_action(txt, pagesize, page, item, order)
     return {"data": lst, "total": total_items}
 
 

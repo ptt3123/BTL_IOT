@@ -23,6 +23,7 @@ class Data(Base):
     tem = Column("tem", Float, nullable=False)
     hum = Column("hum", Float, nullable=False)
     lig = Column("lig", Float, nullable=False)
+    ws = Column("ws", Integer, nullable=False)
     tim = Column("tim", DateTime, default=datetime.now)
 
 
