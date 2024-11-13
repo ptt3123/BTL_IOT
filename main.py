@@ -28,7 +28,7 @@ def on_message(mqttclient, userdata, msg):
         global cnt
         cnt += 1
         if cnt == 5:
-            create_data(data)
+            # create_data(data)
             cnt = 0
 
         data.update({"tim": datetime.now().strftime("%H:%M:%S")})
@@ -45,7 +45,7 @@ def on_message(mqttclient, userdata, msg):
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
-client.connect('172.20.10.4', 1883)
+client.connect('192.168.1.8', 1883)
 client.loop_start()
 
 
@@ -77,11 +77,11 @@ async def home_get(request: Request):
 async def websocket_endpoint(websocket: WebSocket):
     await websocket.accept()
     ws.append(websocket)
+    global data_hw
+    global client
+    await websocket.send_text(json.dumps(data_hw))
     while True:
         try:
-            global data_hw
-            global client
-
             data = await asyncio.wait_for(websocket.receive_text(), timeout=1.0)
             data = json.loads(data)
             hw = data.get("hw")
